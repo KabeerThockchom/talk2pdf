@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with Documents</title>
+</head>
+<body>
+    <h1>Chat with your PDFs</h1>
+    <form action="" method="post">
+        <input type="text" name="user_input" placeholder="Ask a question...">
+        <input type="submit" value="Send">
+    </form>
+    {% if chat_history %}
+    <div>
+        <ul>
+        {% for message in chat_history %}
+            <li>{{ message.content }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</body>
+</html>
