@@ -18,10 +18,12 @@ import pytesseract
 
 
 app = Flask(__name__)
+#add your secret key here
 app.secret_key = 'your_secret_key'
 CORS(app)
 
 load_dotenv()
+#add your openai key in env
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 conversation_store = {}
